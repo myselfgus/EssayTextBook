@@ -1,0 +1,235 @@
+% !TEX root = ../BookTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Environments}
+\section{Theorems and Proofs}
+\fbox{\parbox{.8\textwidth}{
+ have edited the commands in this and the following sections. Now, two new arguments are required. The first is an additional description in the environment’s title (especially useful for remarks and examples). The second is the label of the environment, which is needed for cross-references. Both arguments may be left empty.}}
+\vspace{.25cm}
+
+\begin{verbatim}
+\begin{The}{Additional title}{Label}
+\lipsum[2]
+\end{The}
+\end{verbatim}
+
+\begin{The}{Additional title}{Label}
+\lipsum[2]
+\end{The}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{verbatim}
+\begin{Proof}
+\lipsum[2]
+\end{Proof}
+\end{verbatim}
+
+\begin{Proof}
+\lipsum[2]
+\end{Proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{verbatim}
+\begin{Pro}{}{Label}
+\lipsum[1]
+\end{Pro}
+\end{verbatim}
+
+\begin{Pro}{}{Label}
+\lipsum[1]
+\end{Pro}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{verbatim}
+\begin{Le}{}{Label}
+\lipsum[2]
+\end{Le}
+\end{verbatim}
+
+\begin{Le}{}{Label}
+\lipsum[2]
+\end{Le}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{verbatim}
+\begin{Co}{}{Label}
+\lipsum[2]
+\end{Co}
+\end{verbatim}
+
+\begin{Co}{}{Label}
+\lipsum[2]
+\end{Co}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Definitions, Examples, Remarks}
+\begin{verbatim}
+\begin{De}{}{Label}
+\lipsum[2]
+\end{De}
+\end{verbatim}
+
+\begin{De}{}{Label}
+\lipsum[2]
+\end{De}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{verbatim}
+\begin{Exa}{}{Label}
+\lipsum[8]
+\end{Exa}
+\end{verbatim}
+
+\begin{Exa}{}{Label}
+\lipsum[8]
+\end{Exa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{verbatim}
+\begin{Rmk}{}{Label}
+\lipsum[2]
+\end{Rmk}
+\end{verbatim}
+
+\begin{Rmk}{}{Label}
+\lipsum[2]
+\end{Rmk}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph*{}
+There are similar commands to create a Theorem, Proposition... without numbering. Here, only a new argument is required for an additional description in the title. For instance:
+
+\begin{verbatim}
+\begin{Pro*}{}
+\lipsum[2]
+\end{Pro*}
+\end{verbatim}
+
+\begin{Pro*}{}
+\lipsum[2]
+\end{Pro*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Description, itemize, enumerate}
+\paragraph*{} \underline{Description with boxed labels}
+\begin{verbatim}
+\begin{description}
+  \item[\boxlabel{Label 1}{1.5cm}]
+        \lipsum[1]
+  \item[\boxlabel{Label 2 with a very long comment}{4cm}]
+        \lipsum[2]
+\end{description}
+\end{verbatim}
+
+\begin{description}
+  \item[\boxlabel{Label 1}{1.5cm}]
+        \lipsum[1]
+  \item[\boxlabel{Label 2 with a very long comment}{4.2cm}]
+         \lipsum[2]
+\end{description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph*{} \underline{Description}
+\begin{verbatim}
+\begin{description}
+\item[Label 1] \lipsum[1]
+\item[Label 2] \lipsum[2]
+\end{description}
+\end{verbatim}
+
+\begin{description}
+\item[Label 1] \lipsum[1]
+\item[Label 2] \lipsum[2]
+\end{description}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph*{} \underline{Itemize}
+\begin{verbatim}
+\begin{itemize}
+    \item \lipsum[2]
+    \item \lipsum[2]
+    \item \lipsum[2]
+\end{itemize}
+\end{verbatim}
+
+\begin{itemize}
+    \item \lipsum[2]
+    \item \lipsum[2]
+    \item \lipsum[2]
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\paragraph*{} \underline{Enumerate}
+\begin{verbatim}
+\begin{enumerate}
+    \item \lipsum[2]
+    \item \lipsum[2]
+\end{enumerate}
+\end{verbatim}
+
+\begin{enumerate}
+    \item \lipsum[2]
+    \item \lipsum[2]
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Margin Notes}
+	\lipsum[2]
+	\note{Margin note\\
+    \text{$\setminus$note\{Note\}}}
+	\begin{Rmk}{}{}
+    \lipsum[2]
+    \note{Margin note}
+    \lipsum[2]
+    \end{Rmk}
+	\lipsum[2]
+    \begin{Proof}
+    \lipsum[2]
+    \sub
+    \expl{$\setminus$sub\\
+    Different colour\\ to explain a step\\ in a proof\\[2pt] \text{$\setminus$expl\{\#1\}}}
+	\lipsum[2]
+    \end{Proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hypertext links, quotes, indices, urls}\label{Label}
+\paragraph*{}
+We obtain a hypertext link with
+\begin{verbatim}
+    \label{Label}
+\end{verbatim}
+\noindent and we call it with
+\begin{verbatim}
+    \ref{Label}
+\end{verbatim}
+Result: Section \ref{Label}
+
+\fbox{\parbox{.8\textwidth}{
+Now, to obtain the corrected reference for a theorem, a proposition, a lemma, a corollary, a definition, a example, we must use the second argument in the environments defined as above. Each environment as a key word to write before the effective label. Here there are the key words for each environment: we use as examples the callings of these environments used in the previous sections.}}
+
+\begin{center}
+\begin{tabular}{c|c}
+Theorem \text{$\setminus$the:Label} & Theorem \ref{the:Label}\\
+Proposition \text{$\setminus$pro:Label} & Proposition \ref{pro:Label} \\
+Lemma \text{$\setminus$le:Label} & Lemma \ref{le:Label}\\
+Corollary \text{$\setminus$co:Label} & Corollary \ref{co:Label}\\
+Definition \text{$\setminus$de:Label} & Definition \ref{de:Label}\\
+Example \text{$\setminus$exa:Label} & Example \ref{exa:Label}\\
+Remark \text{$\setminus$rmk:Label} & Remark \ref{rmk:Label}
+\end{tabular}
+\end{center}
+
+\paragraph*{}
+We quote a book in the bibliography with
+\begin{verbatim}
+    \cite{LabelBook}
+\end{verbatim}
+Result: \cite{LabelBook}
+
+\paragraph*{}
+We add new elements in the analytic index with
+\begin{verbatim}
+    \index{Index}
+        \index{IndexSecondVoice}
+    \index{Index!ThirdVoice}
+    \index{Index!ThirdVoice!Part 1}
+    \index{Index!ThirdVoice!Part 2}
+\end{verbatim}
+The result of this two commands is shown in the analytic index at the end of the document.
+    \index{Index}
+        \index{IndexSecondVoice}
+    \index{Index!ThirdVoice}
+    \index{Index!ThirdVoice!Part 1}
+    \index{Index!ThirdVoice!Part 2}
+
+\paragraph*{}
+We create URL links with
+\begin{verbatim}
+    \url{https://mattiapuddu25.github.io/main/index.html}
+\end{verbatim}
+Result: \url{https://mattiapuddu25.github.io/main/index.html}
