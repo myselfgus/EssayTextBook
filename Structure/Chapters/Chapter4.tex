@@ -1,0 +1,331 @@
+% !TEX root = ../../BookTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Etiologia da Doenca Mental}
+\label{cap:etiologia}
+
+\begin{center}
+\textit{``A causalidade em psiquiatria e `matizada' (dappled): multiplos fatores interagem ao longo do tempo, nenhum suficiente isoladamente, nenhum necessario absolutamente.''}\\[0.3cm]
+--- Kenneth Kendler (2012)
+\end{center}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introducao: Onde Mora a Doenca?}
+\label{sec:onde-mora}
+\index{Etiologia}
+
+A pergunta pela etiologia --- a causa, a origem, o fundamento --- de uma doenca mental parece, a primeira vista, pertencer ao dominio das ciencias naturais. Identificar o agente causador, localizar a lesao, determinar o mecanismo fisiopatologico: este e o programa da medicina cientifica desde Virchow e sua patologia celular. Entretanto, como observa \autor{Jaspers} (1913/1997), a psiquiatria ocupa posicao peculiar entre as disciplinas medicas, pois seu objeto --- a experiencia subjetiva alterada --- resiste as categorias explicativas que funcionam tao bem para tumores, infeccoes e fraturas.
+
+\begin{questao}
+Se perguntamos ``onde esta a pneumonia?'', a resposta e relativamente simples: nos pulmoes, nas celulas alveolares inflamadas, no tecido infiltrado por neutrofilos.
+
+Mas se perguntamos ``onde esta a depressao?'' --- onde, precisamente, ela \textit{mora} ---, a resposta ja nao e tao evidente:
+
+\begin{itemize}
+    \item No cerebro? Em quais circuitos? Em quais neurotransmissores?
+    \item Na historia de perdas acumuladas?
+    \item Na infancia marcada por negligencia?
+    \item No casamento que sufoca? No trabalho que aliena?
+    \item Na sociedade que exclui?
+    \item Na linguagem que nomeia o sofrimento?
+\end{itemize}
+\end{questao}
+
+\begin{conceitochave}[title={Tese Central}]
+\textbf{A etiologia de uma doenca mental nao pode ser localizada exclusivamente no interior do individuo que a manifesta.}
+
+Esta proposicao, uma vez articulada, desestabiliza o edificio conceitual sobre o qual repousa boa parte da pratica psiquiatrica contemporanea.
+\end{conceitochave}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A Temporalidade do Adoecer Mental}
+\label{sec:temporalidade}
+\index{Temporalidade}
+
+\subsection{A Doenca Como Evento ou Como Processo?}
+
+A medicina somatica frequentemente opera com modelo de doenca como \textit{evento} --- algo que \textit{acontece} ao organismo em momento determinado. O infarto ocorre as 14h37 de uma terca-feira; a fratura acontece no instante do impacto; a infeccao inicia quando o patogeno penetra as barreiras do hospedeiro.
+
+\begin{observacao}
+\textbf{Mas quando comeca uma depressao? Quando comeca uma esquizofrenia?}
+
+\autor{Fuchs} (2012) observa que os transtornos mentais caracterizam-se por estrutura temporal radicalmente distinta. Nao ha o \textit{momento} em que alguem ``contrai'' depressao como se contrai gripe.
+\end{observacao}
+
+O que observamos e processo gradual de transformacao --- o que \autor{Minkowski} (1927/1970) denominou alteracao no ``tempo vivido'' (\textit{temps vecu}) --- que frequentemente so se torna visivel retrospectivamente.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=0.5cm,
+    event/.style={rectangle, draw=BrickRed, fill=boxred, text width=3cm, text centered, minimum height=1cm, font=\small},
+    process/.style={rectangle, draw=OliveGreen, fill=boxgreen, text width=8cm, text centered, minimum height=1cm, font=\small}
+]
+    \node[event] (evento) {\textbf{Doenca como Evento}\\Pontual, datavel};
+    \node[process, below=1cm of evento] (processo) {\textbf{Doenca Mental como Processo}\\Gradual, retrospectivo, emergente};
+
+    \node[right=0.5cm of evento, font=\footnotesize] {Infarto, fratura, infeccao};
+    \node[right=0.5cm of processo, font=\footnotesize] {Depressao, esquizofrenia};
+\end{tikzpicture}
+\caption{Modelos temporais de adoecimento}
+\label{fig:temporalidade}
+\end{figure}
+
+Se a doenca nao \textit{comeca} em momento identificavel, mas \textit{emerge} de processo prolongado, entao a busca por \textit{a} causa --- singular, pontual, determinante --- revela-se inadequada.
+
+\subsection{A Doenca Tem Historia}
+
+\autor{Ricoeur} (1990/1992) propoe que o \textit{si mesmo} nao e substancia fixa, mas configuracao temporal --- somos as historias que contamos sobre nos mesmos. Se o sujeito e narrativa, entao sua doenca tambem e narrativa.
+
+\begin{casoclinico}[title={A Depressao de Maria}]
+Uma mulher de 45 anos apresenta episodio depressivo grave. O psiquiatra documenta: humor deprimido, anedonia, insonia, ideacao suicida. Pode localizar alteracoes em circuitos neurais, prescrever antidepressivo.
+
+Mas \textit{esta} depressao, \textit{desta} mulher, e tambem:
+\begin{itemize}
+    \item O pai alcoolatra que a humilhava na infancia
+    \item O primeiro casamento marcado por violencia
+    \item A demissao apos vinte anos de dedicacao
+    \item Os filhos que se afastaram
+    \item O corpo que envelhece em sociedade que valoriza juventude
+    \item A solidao em cidade que nao reconhece
+\end{itemize}
+
+\textbf{Onde esta a etiologia desta depressao?} No deficit de serotonina? Na historia de trauma? Na estrutura economica? Nos valores culturais?
+\end{casoclinico}
+
+\subsection{Temporalidade e Causalidade Circular}
+\index{Causalidade circular}
+
+\autor{Bateson} (1972) observa que em fenomenos complexos encontramos \termotecnico{causalidade circular} --- A causa B que causa C que retroage sobre A, em loops que se auto-mantem.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=2.5cm,
+    state/.style={ellipse, draw=chaptercolor, fill=boxblue, text width=2.5cm, text centered, minimum height=1.5cm, font=\small}
+]
+    \node[state] (isolamento) {Isolamento\\Social};
+    \node[state, right=of isolamento] (depressao) {Depressao};
+    \node[state, below right=1.5cm and 1.25cm of isolamento] (mais) {Mais\\Isolamento};
+
+    \draw[-Stealth, thick] (isolamento) -- node[above, font=\footnotesize] {causa} (depressao);
+    \draw[-Stealth, thick] (depressao) -- node[right, font=\footnotesize] {causa} (mais);
+    \draw[-Stealth, thick] (mais) -- node[below, font=\footnotesize] {aprofunda} (isolamento);
+\end{tikzpicture}
+\caption{Causalidade circular em depressao}
+\label{fig:causalidade-circular}
+\end{figure}
+
+\begin{observacao}
+Em sistemas circulares, a ``causa'' e o ``efeito'' sao distincoes arbitrarias que dependem de onde o observador escolhe \textit{pontuar} a sequencia (\autor{Watzlawick} et al., 1967).
+
+O marido diz que bebe porque a esposa reclama; a esposa diz que reclama porque o marido bebe. Ambos estao ``certos''.
+\end{observacao}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A Contextualidade do Adoecer Mental}
+\label{sec:contextualidade}
+\index{Contexto}
+
+\subsection{O Contexto Como Fundo Necessario}
+
+\autor{Merleau-Ponty} (1945/2006) demonstra que toda figura so e figura contra um fundo --- nao existe percepcao de objeto isolado, mas sempre de objeto \textit{em} campo perceptivo que o circunda e o constitui.
+
+\begin{definicaobox}[title={Disease vs. Illness (Kleinman)}]
+\autor{Kleinman} (1988) distingue:
+\begin{description}
+    \item[\textit{Disease}:] A disfuncao biologica objetivavel
+    \item[\textit{Illness}:] A experiencia vivida do adoecimento, culturalmente mediada
+\end{description}
+
+O mesmo processo biologico pode constituir experiencias radicalmente diferentes dependendo do contexto cultural, social e biografico.
+\end{definicaobox}
+
+A ``mesma'' depressao e vivida diferentemente pelo executivo paulistano e pelo agricultor nordestino, pela adolescente e pela idosa, pelo heterossexual e pelo homossexual em sociedade homofobica.
+
+\subsection{Contextos Patogenicos}
+\index{Determinantes sociais}
+
+Se o contexto constitui a doenca, entao certos contextos sao \termotecnico{patogenicos} --- nao no sentido de conterem ``germes'' psiquicos, mas no sentido de criarem condicoes nas quais o adoecimento torna-se mais provavel.
+
+\begin{table}[H]
+\centering
+\caption{Contextos patogenicos documentados}
+\label{tab:contextos}
+\begin{tabular}{p{4cm}p{7cm}}
+\toprule
+\textbf{Contexto} & \textbf{Efeito Documentado} \\
+\midrule
+Pobreza & Aumento de prevalencia de transtornos mentais \\
+Desigualdade & Afeta toda a populacao, nao apenas pobres \\
+Discriminacao & Estresse cronico, trauma \\
+Violencia & TEPT, depressao, ansiedade \\
+Precarizacao do trabalho & Burnout, ansiedade, depressao \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\autor{Wilkinson e Pickett} (2009) demonstram que sociedades mais desiguais apresentam prevalencia maior de transtornos mentais --- a desigualdade e toxico social que afeta o tecido relacional como um todo.
+
+\begin{questao}
+\textbf{A Pergunta Incomoda}
+
+Se o contexto e patogenico, por que tratamos apenas o individuo?
+
+A resposta habitual --- que nao podemos mudar a sociedade, mas podemos tratar o paciente --- e pragmaticamente compreensivel, mas epistemologicamente insustentavel.
+
+\textit{E como se, diante de epidemia de colera, a medicina se limitasse a reidratar os doentes sem questionar a qualidade da agua.}
+\end{questao}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{O Locus Etiologico: Onde Esta a Causa?}
+\label{sec:locus}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=1.5cm,
+    model/.style={rectangle, draw, text width=3.5cm, text centered, rounded corners, minimum height=2cm, font=\small}
+]
+    \node[model, draw=BrickRed, fill=boxred] (bio) at (0,0) {\textbf{Modelo Biomedico}\\Etiologia no EU\\(Cerebro)};
+    \node[model, draw=OliveGreen, fill=boxgreen] (rel) at (4.5,0) {\textbf{Modelo Relacional}\\Etiologia no OUTRO\\(Relacoes)};
+    \node[model, draw=BurntOrange, fill=boxorange] (soc) at (0,-3.5) {\textbf{Modelo Critico}\\Etiologia na SOCIEDADE\\(Estruturas)};
+    \node[model, draw=chaptercolor, fill=boxblue] (disc) at (4.5,-3.5) {\textbf{Modelo Discursivo}\\Etiologia na LINGUAGEM\\(Discursos)};
+\end{tikzpicture}
+\caption{Quatro perspectivas sobre o locus etiologico}
+\label{fig:locus}
+\end{figure}
+
+\subsection{A Etiologia no Eu: O Modelo Biomedico}
+\index{Modelo biomedico}
+
+O modelo biomedico localiza a etiologia no organismo individual --- transtornos mentais seriam ``doencas do cerebro'' causadas por disfuncoes em circuitos neurais especificos.
+
+\begin{conceitochave}[title={Meritos e Limites do Modelo Biomedico}]
+\textbf{Meritos:}
+\begin{itemize}
+    \item Legitimou o sofrimento mental como fenomeno ``real''
+    \item Avancos psicofarmacologicos aliviaram milhoes
+\end{itemize}
+
+\textbf{Limites:}
+\begin{itemize}
+    \item Reducao epistemica: niveis superiores (experiencia, significado) ``explicados'' por inferiores (neuronios, moleculas)
+    \item Correlacao nao e causacao
+    \item A tristeza correlaciona-se com padroes cerebrais, mas pode ser \textit{causada} pela perda
+\end{itemize}
+\end{conceitochave}
+
+\autor{Kirmayer e Gold} (2012) denominam essa tendencia de ``neurofagia'' --- que devora dimensoes do fenomeno irredutiveis a mecanismos neurais.
+
+\subsection{A Etiologia no Outro: O Modelo Relacional}
+\index{Teoria do apego}
+\index{Winnicott}
+
+\autor{Winnicott} (1960/1983), com sua celebre observacao de que ``nao existe bebe'' --- apenas diade mae-bebe ---, fundamenta esta perspectiva. O self \textit{emerge} das relacoes, e constituido pelo cuidado (ou negligencia) do outro.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    node distance=1.2cm,
+    pattern/.style={rectangle, draw=sectioncolor, fill=boxblue, text width=3cm, text centered, minimum height=1cm, font=\small}
+]
+    \node[pattern] (seguro) {Apego Seguro};
+    \node[pattern, right=of seguro] (ansioso) {Apego Ansioso};
+    \node[pattern, right=of ansioso] (evitativo) {Apego Evitativo};
+    \node[pattern, right=of evitativo] (desorg) {Desorganizado};
+
+    \node[below=1cm of $(ansioso)!0.5!(evitativo)$, text width=10cm, text centered, font=\small\itshape] {Padroes formados na infancia predizem funcionamento ao longo da vida (Bowlby)};
+\end{tikzpicture}
+\caption{Padroes de apego e suas origens relacionais}
+\label{fig:apego}
+\end{figure}
+
+\begin{observacao}
+Se a etiologia esta nas relacoes, o tratamento deve ser relacional. A relacao terapeutica nao e mero veiculo para tecnicas; e, ela mesma, o agente de cura.
+\end{observacao}
+
+\subsection{A Etiologia na Sociedade: O Modelo Critico}
+\index{Foucault}
+\index{Antipsiquiatria}
+
+\autor{Foucault} (1961/2006) demonstra que as categorias psiquiatricas nao sao descobertas neutras de entidades naturais, mas construcoes historicas inseparaveis de dispositivos de poder.
+
+\begin{questao}
+Considere-se a epidemia contemporanea de ``transtornos de ansiedade''.
+
+Seria coincidencia que esta epidemia ocorra precisamente em sociedades caracterizadas por:
+\begin{itemize}
+    \item Precarizacao do trabalho
+    \item Erosao de vinculos comunitarios
+    \item Competicao generalizada
+    \item Exposicao constante a noticias ameacadoras
+    \item Demandas impossiveis de desempenho
+\end{itemize}
+
+Ou estamos medicalizando --- e despolitizando --- respostas razoaveis a condicoes objetivamente ansiogenicas?
+\end{questao}
+
+\subsection{A Etiologia na Linguagem: O Modelo Discursivo}
+\index{Lacan}
+\index{Performatividade}
+
+\autor{Lacan} (1966/2006) propoe que ``o inconsciente e estruturado como linguagem''. Nao somos sujeitos que \textit{usam} linguagem; somos sujeitos \textit{constituidos} pela linguagem.
+
+\autor{Butler} (1990/2003) demonstra que categorias como ``masculino'' e ``feminino'' sao performativamente constituidas. A menina que nao performa feminilidade ``adequadamente'' esta sendo constituida como ``desviante'' por discursos que definem o normal.
+
+\begin{observacao}
+O sofrimento que resulta desta constituicao discursiva --- disforia de genero, vergonha do corpo, sensacao de nao pertencer --- e real. Mas sua etiologia esta nos discursos normativos que definem certos corpos como patologicos.
+\end{observacao}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Implicacoes da Deslocalizacao Etiologica}
+\label{sec:implicacoes}
+
+\begin{table}[H]
+\centering
+\caption{Implicacoes da deslocalizacao etiologica}
+\label{tab:implicacoes}
+\begin{tabular}{p{3cm}p{8.5cm}}
+\toprule
+\textbf{Dominio} & \textbf{Implicacao} \\
+\midrule
+Diagnostico & Deve incluir avaliacao do contexto: relacoes, condicoes sociais, discursos constituintes \\
+\addlinespace
+Tratamento & Deve ser distribuido: intervencao farmacologica + psicoterapia + acoes comunitarias + mudanca social \\
+\addlinespace
+Responsabilidade & Redistribuida: recusa da culpabilizacao do individuo por causas que estao fora dele \\
+\addlinespace
+Etica/Politica & Prevencao requer transformacao social, nao apenas melhores servicos \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusao: A Etiologia Como Questao Aberta}
+\label{sec:conclusao-etiologia}
+
+Iniciamos este capitulo com pergunta aparentemente simples: onde esta a causa da doenca mental? Percorremos possiveis respostas --- no Eu, no Outro, na Sociedade, na Linguagem --- e encontramos, em cada caso, verdade parcial e limitacao.
+
+\begin{sintese}
+\textbf{Ideias centrais deste capitulo:}
+\begin{enumerate}
+    \item A doenca mental e processo temporal, nao evento pontual.
+    \item O contexto nao e cenario; o contexto \textit{constitui} a doenca.
+    \item A etiologia e \textbf{distribuida}: cerebro, relacoes, sociedade, linguagem.
+    \item Tratar apenas o individuo e epistemologicamente insustentavel.
+    \item A causalidade circular torna a busca por ``a causa'' frequentemente infrutifera.
+    \item Reconhecer causas externas redistribui responsabilidade e despolitiza o sofrimento.
+\end{enumerate}
+
+\vspace{0.5cm}
+\textbf{Conceitos-chave:} Temporalidade $\bullet$ Causalidade circular $\bullet$ Contextos patogenicos $\bullet$ Disease vs. Illness $\bullet$ Deslocalizacao etiologica
+\end{sintese}
+
+\vspace{1cm}
+
+\begin{center}
+\large\itshape
+Se a doenca mental tem sua origem, ao menos parcialmente, fora do individuo que a manifesta, entao a tarefa do clinico nao e apenas tratar o paciente, mas tambem testemunhar a injustica que o adoece. E testemunhar, como nos ensina a tradicao das comissoes de verdade, e ja uma forma de cura.
+\end{center}

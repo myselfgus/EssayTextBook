@@ -1,0 +1,192 @@
+% !TEX root = ../BookTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%   PACKAGES
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{hyperref}
+\usepackage{makeidx}
+\usepackage{csquotes}
+\usepackage{enumitem}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage[dvipsnames,svgnames,table]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable,theorems}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,calc,decorations.pathreplacing,mindmap,trees}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   COLORS
+\definecolor{chaptercolor}{RGB}{0,51,102}
+\definecolor{sectioncolor}{RGB}{51,102,153}
+\definecolor{boxblue}{RGB}{230,240,250}
+\definecolor{boxgreen}{RGB}{230,250,230}
+\definecolor{boxorange}{RGB}{255,245,230}
+\definecolor{boxred}{RGB}{255,235,235}
+\definecolor{boxgray}{RGB}{245,245,245}
+\definecolor{Url}{RGB}{238,34,0}
+\definecolor{Cite}{RGB}{46,112,64}
+\definecolor{Link}{RGB}{4,72,124}
+\definecolor{MarginNote}{RGB}{228,84,54}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   PAGE LAYOUT
+\geometry{
+    a4paper,
+    top=3cm,
+    bottom=2.5cm,
+    left=3cm,
+    right=2.5cm,
+    marginparsep=12pt,
+    marginparwidth=60pt,
+    headheight=14pt
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   HEADERS AND FOOTERS
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   CHAPTER AND SECTION FORMATTING
+\titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries\color{chaptercolor}}
+    {\chaptertitlename\ \thechapter}
+    {20pt}
+    {\Huge}
+\titleformat{\section}
+    {\normalfont\Large\bfseries\color{sectioncolor}}
+    {\thesection}
+    {1em}
+    {}
+\titleformat{\subsection}
+    {\normalfont\large\bfseries}
+    {\thesubsection}
+    {1em}
+    {}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   TABLE OF CONTENTS
+\renewcommand{\cftchapfont}{\bfseries\color{chaptercolor}}
+\renewcommand{\cftsecfont}{\color{sectioncolor}}
+\setlength{\cftbeforechapskip}{8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   HYPERLINKS
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Link,
+    citecolor=Cite,
+    urlcolor=Url,
+    bookmarksnumbered=true,
+    bookmarksopen=true
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   INDEX
+\makeindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   THEOREMS AND ENVIRONMENTS (Original Template Style)
+\newtheoremstyle{customthm}
+  {10pt}{10pt}{\itshape}{}{\bfseries}{.}{.5em}{}
+\newtheoremstyle{customdef}
+  {10pt}{10pt}{\normalfont}{}{\bfseries}{.}{.5em}{}
+
+\theoremstyle{customthm}
+\newtheorem{The}{\TheoremName}[chapter]
+\newtheorem{Pro}{\PropositionName}[chapter]
+\newtheorem{Le}{\LemmaName}[chapter]
+\newtheorem{Co}{\CorollaryName}[chapter]
+
+\theoremstyle{customdef}
+\newtheorem{De}{\DefinitionName}[chapter]
+\newtheorem{Exa}{\ExampleName}[chapter]
+\newtheorem{Rmk}{\RemarkName}[chapter]
+
+\newenvironment{Proof}{\begin{proof}[\ProofName]}{\end{proof}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   CUSTOM BOXES (Enhanced for Psychiatry Book)
+\newtcolorbox{conceitochave}[1][]{
+    enhanced,
+    breakable,
+    colback=boxblue,
+    colframe=chaptercolor,
+    fonttitle=\bfseries,
+    title={\KeyConceptName},
+    #1
+}
+
+\newtcolorbox{casoclinico}[1][]{
+    enhanced,
+    breakable,
+    colback=boxgreen,
+    colframe=OliveGreen,
+    fonttitle=\bfseries,
+    title={\CaseStudyName},
+    #1
+}
+
+\newtcolorbox{questao}[1][]{
+    enhanced,
+    breakable,
+    colback=boxorange,
+    colframe=BurntOrange,
+    fonttitle=\bfseries,
+    title={\QuestionName},
+    #1
+}
+
+\newtcolorbox{observacao}[1][]{
+    enhanced,
+    breakable,
+    colback=boxred,
+    colframe=BrickRed,
+    fonttitle=\bfseries,
+    title={Observacao Importante},
+    #1
+}
+
+\newtcolorbox{definicaobox}[1][]{
+    enhanced,
+    breakable,
+    colback=boxgray,
+    colframe=Gray,
+    fonttitle=\bfseries,
+    title={\DefinitionName},
+    #1
+}
+
+\newtcolorbox{sintese}[1][]{
+    enhanced,
+    breakable,
+    colback=white,
+    colframe=chaptercolor,
+    fonttitle=\bfseries\large,
+    title={Sintese do Capitulo},
+    boxrule=2pt,
+    #1
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   MARGIN NOTES
+\newcommand{\note}[1]{\marginpar{\footnotesize\color{MarginNote}#1}}
+\newcommand{\expl}[1]{\marginpar{\footnotesize\color{Cite}#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   UTILITY COMMANDS
+\newcommand{\boxlabel}[2]{\fbox{\parbox{#2}{\centering #1}}}
+\newcommand{\aspas}[1]{``#1''}
+\newcommand{\termolatim}[1]{\textit{#1}}
+\newcommand{\termotecnico}[1]{\textbf{#1}\index{#1}}
+\newcommand{\autor}[1]{\textsc{#1}}
